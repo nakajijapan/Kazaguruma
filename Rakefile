@@ -33,7 +33,7 @@ namespace "build" do
   task :ios do |task, args|
 
     destination = currentDestination
-    run "xcodebuild -workspace #{$WORKSPACE} -scheme #{$PROJECT} -destination '#{destination}' -configuration Debug clean build TEST_AFTER_BUILD=YES "
+    run "xcodebuild -workspace #{$WORKSPACE} -scheme #{$PROJECT} -destination '#{destination}' -configuration Debug clean build TEST_AFTER_BUILD=YES | xcpretty"
 
   end
 
@@ -45,7 +45,7 @@ namespace "test" do
   task :ios do |task, args|
 
     destination = currentDestination
-    run "xcodebuild -workspace #{$WORKSPACE} -scheme #{$PROJECT} -destination '#{destination}' -destination-timeout 1 -sdk iphonesimulator -configuration Debug clean test"
+    run "xcodebuild -workspace #{$WORKSPACE} -scheme #{$PROJECT} -destination '#{destination}' -destination-timeout 1 -sdk iphonesimulator -configuration Debug clean test | xcpretty"
 
   end
 
