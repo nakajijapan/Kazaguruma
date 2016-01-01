@@ -1,0 +1,436 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DCA565951C3404EE004AF700 /* Kazaguruma.h in Headers */ = {isa = PBXBuildFile; fileRef = DCA565941C3404EE004AF700 /* Kazaguruma.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DCA5659C1C3404EE004AF700 /* Kazaguruma.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCA565911C3404EE004AF700 /* Kazaguruma.framework */; };
+		DCA565A11C3404EE004AF700 /* KazagurumaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA565A01C3404EE004AF700 /* KazagurumaTests.swift */; };
+		DCA565B31C34055A004AF700 /* Kazaguruma.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA565B01C34055A004AF700 /* Kazaguruma.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		DCA565B41C340587004AF700 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.xcode.tools.swift.compiler;
+			fileType = sourcecode.swift;
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "# $(SWIFT_EXEC)\n";
+		};
+/* End PBXBuildRule section */
+
+/* Begin PBXContainerItemProxy section */
+		DCA5659D1C3404EE004AF700 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DCA565881C3404EE004AF700 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DCA565901C3404EE004AF700;
+			remoteInfo = Kazaguruma;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DCA565911C3404EE004AF700 /* Kazaguruma.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kazaguruma.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCA565941C3404EE004AF700 /* Kazaguruma.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Kazaguruma.h; sourceTree = "<group>"; };
+		DCA565961C3404EE004AF700 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCA5659B1C3404EE004AF700 /* KazagurumaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KazagurumaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCA565A01C3404EE004AF700 /* KazagurumaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KazagurumaTests.swift; sourceTree = "<group>"; };
+		DCA565A21C3404EE004AF700 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCA565B01C34055A004AF700 /* Kazaguruma.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kazaguruma.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DCA5658D1C3404EE004AF700 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCA565981C3404EE004AF700 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCA5659C1C3404EE004AF700 /* Kazaguruma.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DCA565871C3404EE004AF700 = {
+			isa = PBXGroup;
+			children = (
+				DCA565AB1C34055A004AF700 /* Sources */,
+				DCA565931C3404EE004AF700 /* Kazaguruma */,
+				DCA5659F1C3404EE004AF700 /* KazagurumaTests */,
+				DCA565921C3404EE004AF700 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DCA565921C3404EE004AF700 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DCA565911C3404EE004AF700 /* Kazaguruma.framework */,
+				DCA5659B1C3404EE004AF700 /* KazagurumaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DCA565931C3404EE004AF700 /* Kazaguruma */ = {
+			isa = PBXGroup;
+			children = (
+				DCA565941C3404EE004AF700 /* Kazaguruma.h */,
+				DCA565961C3404EE004AF700 /* Info.plist */,
+			);
+			path = Kazaguruma;
+			sourceTree = "<group>";
+		};
+		DCA5659F1C3404EE004AF700 /* KazagurumaTests */ = {
+			isa = PBXGroup;
+			children = (
+				DCA565A01C3404EE004AF700 /* KazagurumaTests.swift */,
+				DCA565A21C3404EE004AF700 /* Info.plist */,
+			);
+			path = KazagurumaTests;
+			sourceTree = "<group>";
+		};
+		DCA565AB1C34055A004AF700 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				DCA565AC1C34055A004AF700 /* Assets */,
+				DCA565AE1C34055A004AF700 /* Classes */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		DCA565AC1C34055A004AF700 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		DCA565AE1C34055A004AF700 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DCA565B01C34055A004AF700 /* Kazaguruma.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		DCA5658E1C3404EE004AF700 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCA565951C3404EE004AF700 /* Kazaguruma.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		DCA565901C3404EE004AF700 /* Kazaguruma */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCA565A51C3404EE004AF700 /* Build configuration list for PBXNativeTarget "Kazaguruma" */;
+			buildPhases = (
+				DCA5658C1C3404EE004AF700 /* Sources */,
+				DCA5658D1C3404EE004AF700 /* Frameworks */,
+				DCA5658E1C3404EE004AF700 /* Headers */,
+				DCA5658F1C3404EE004AF700 /* Resources */,
+			);
+			buildRules = (
+				DCA565B41C340587004AF700 /* PBXBuildRule */,
+			);
+			dependencies = (
+			);
+			name = Kazaguruma;
+			productName = Kazaguruma;
+			productReference = DCA565911C3404EE004AF700 /* Kazaguruma.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DCA5659A1C3404EE004AF700 /* KazagurumaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCA565A81C3404EE004AF700 /* Build configuration list for PBXNativeTarget "KazagurumaTests" */;
+			buildPhases = (
+				DCA565971C3404EE004AF700 /* Sources */,
+				DCA565981C3404EE004AF700 /* Frameworks */,
+				DCA565991C3404EE004AF700 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DCA5659E1C3404EE004AF700 /* PBXTargetDependency */,
+			);
+			name = KazagurumaTests;
+			productName = KazagurumaTests;
+			productReference = DCA5659B1C3404EE004AF700 /* KazagurumaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DCA565881C3404EE004AF700 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = nakajijapan;
+				TargetAttributes = {
+					DCA565901C3404EE004AF700 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					DCA5659A1C3404EE004AF700 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = DCA5658B1C3404EE004AF700 /* Build configuration list for PBXProject "Kazaguruma" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DCA565871C3404EE004AF700;
+			productRefGroup = DCA565921C3404EE004AF700 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DCA565901C3404EE004AF700 /* Kazaguruma */,
+				DCA5659A1C3404EE004AF700 /* KazagurumaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DCA5658F1C3404EE004AF700 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCA565991C3404EE004AF700 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DCA5658C1C3404EE004AF700 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCA565B31C34055A004AF700 /* Kazaguruma.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCA565971C3404EE004AF700 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCA565A11C3404EE004AF700 /* KazagurumaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DCA5659E1C3404EE004AF700 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DCA565901C3404EE004AF700 /* Kazaguruma */;
+			targetProxy = DCA5659D1C3404EE004AF700 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		DCA565A31C3404EE004AF700 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DCA565A41C3404EE004AF700 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DCA565A61C3404EE004AF700 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Kazaguruma/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.nakajijapan.Kazaguruma;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		DCA565A71C3404EE004AF700 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Kazaguruma/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.nakajijapan.Kazaguruma;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		DCA565A91C3404EE004AF700 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = KazagurumaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.nakajijapan.KazagurumaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DCA565AA1C3404EE004AF700 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = KazagurumaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.nakajijapan.KazagurumaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DCA5658B1C3404EE004AF700 /* Build configuration list for PBXProject "Kazaguruma" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCA565A31C3404EE004AF700 /* Debug */,
+				DCA565A41C3404EE004AF700 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCA565A51C3404EE004AF700 /* Build configuration list for PBXNativeTarget "Kazaguruma" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCA565A61C3404EE004AF700 /* Debug */,
+				DCA565A71C3404EE004AF700 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCA565A81C3404EE004AF700 /* Build configuration list for PBXNativeTarget "KazagurumaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCA565A91C3404EE004AF700 /* Debug */,
+				DCA565AA1C3404EE004AF700 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DCA565881C3404EE004AF700 /* Project object */;
+}
