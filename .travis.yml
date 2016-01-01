@@ -1,0 +1,18 @@
+language: objective-c
+osx_image: xcode7.2
+
+env:
+  matrix:
+    - DESTINATION="OS=8.4,name=iPhone 6"
+    - DESTINATION="OS=9.1,name=iPhone 6S"
+    - DESTINATION="platform=iOS Simulator,name=iPhone 6s Plus"
+
+before_install:
+  - gem install cocoapods
+
+install:
+  - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
+
+script:
+  - rake test:ios DESTINATION="$DESTINATION"
+  - pod lib lint --quick
