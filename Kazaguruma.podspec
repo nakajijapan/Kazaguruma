@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Kazaguruma"
-  s.version          = "0.1.0"
+  s.version          = "0.1.1"
   s.summary          = "Kazaguruma is a loading indicator View that can be multiple display on the screen."
   s.homepage         = "https://github.com/nakajijapan/Kazaguruma"
   s.license          = 'MIT'
