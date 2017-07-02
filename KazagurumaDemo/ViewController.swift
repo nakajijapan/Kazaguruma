@@ -26,7 +26,7 @@ class ViewController: UIViewController {
             Kazaguruma.hide(self.headerView)
         }
 
-        _ = Kazaguruma.show(self.headerView2, backgroundColor: .black , indicatorViewStyle: .whiteLarge)
+        _ = Kazaguruma.show(self.headerView2, backgroundColor: .black, indicatorViewStyle: .whiteLarge)
         DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
             Kazaguruma.hide(self.headerView2)
         }
