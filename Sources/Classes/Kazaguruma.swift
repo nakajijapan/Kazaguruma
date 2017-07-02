@@ -107,11 +107,11 @@ open class Kazaguruma: UIView {
 
     }
 
-    open class func hide(_ forView:UIView) {
+    open class func hide(_ forView: UIView) {
         self.hide(forView, animated: false, completion: nil)
     }
 
-    open class func hide(_ forView:UIView, animated:Bool, completion:(() -> Void)?) {
+    open class func hide(_ forView: UIView, animated:Bool, completion:(() -> Void)?) {
 
         if let indicatorView = self.indicatorView(forView) {
             if animated {
@@ -136,7 +136,7 @@ open class Kazaguruma: UIView {
         }
     }
 
-    open class func indicatorView(_ forView:UIView) -> Kazaguruma? {
+    open class func indicatorView(_ forView: UIView) -> Kazaguruma? {
 
         for subview in forView.subviews.reversed() {
 
