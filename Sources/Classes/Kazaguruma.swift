@@ -30,7 +30,7 @@ open class Kazaguruma: UIView {
             self.centerXAnchor.constraint(greaterThanOrEqualTo: activityIndicatorView.centerXAnchor),
             self.centerYAnchor.constraint(greaterThanOrEqualTo: activityIndicatorView.centerYAnchor),
             self.centerXAnchor.constraint(greaterThanOrEqualTo: messageLabel.centerXAnchor),
-            activityIndicatorView.bottomAnchor.constraint(equalTo: messageLabel.topAnchor, constant: -8.0),
+            activityIndicatorView.bottomAnchor.constraint(equalTo: messageLabel.topAnchor, constant: -8.0)
         ].forEach { $0.isActive = true }
     }
 
@@ -50,13 +50,13 @@ open class Kazaguruma: UIView {
         indicatorView.startAnimating()
         toView.addSubview(indicatorView)
 
-        if (enableAutolayout) {
+        if enableAutolayout {
             indicatorView.translatesAutoresizingMaskIntoConstraints = false
             [
                 toView.topAnchor.constraint(equalTo: indicatorView.topAnchor),
                 toView.bottomAnchor.constraint(equalTo: indicatorView.bottomAnchor),
                 toView.leadingAnchor.constraint(equalTo: indicatorView.leadingAnchor),
-                toView.trailingAnchor.constraint(equalTo: indicatorView.trailingAnchor),
+                toView.trailingAnchor.constraint(equalTo: indicatorView.trailingAnchor)
             ].forEach { $0.isActive = true }
 
         }
