@@ -8,23 +8,23 @@
 
 import UIKit
 
-public class Kazaguruma: UIView {
+open class Kazaguruma: UIView {
     
     var activityIndicatorView: UIActivityIndicatorView
     var messageLabel: UILabel
     
     override init(frame: CGRect) {
         
-        self.activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .Gray)
+        self.activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
         self.messageLabel = UILabel()
         
         super.init(frame: frame)
         
-        self.backgroundColor = UIColor.whiteColor()
+        self.backgroundColor = UIColor.white
         self.addSubview(self.activityIndicatorView)
         
-        self.messageLabel.hidden = true
-        self.messageLabel.font = UIFont.systemFontOfSize(14.0)
+        self.messageLabel.isHidden = true
+        self.messageLabel.font = UIFont.systemFont(ofSize: 14.0)
         self.addSubview(self.messageLabel)
         
         // AutoLayout
@@ -35,12 +35,12 @@ public class Kazaguruma: UIView {
             "self": self,
             "activityIndicatorView": self.activityIndicatorView,
             "messageLabel": self.messageLabel,
-            ]
+            ] as [String : Any]
         
-        self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:[self]-(<=0)-[activityIndicatorView]", options: NSLayoutFormatOptions.AlignAllCenterY, metrics: nil, views: views))
-        self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:[self]-(<=0)-[activityIndicatorView]", options: NSLayoutFormatOptions.AlignAllCenterX, metrics: nil, views: views))
-        self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:[self]-(<=0)-[messageLabel]", options: NSLayoutFormatOptions.AlignAllCenterX, metrics: nil, views: views))
-        self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:[activityIndicatorView]-(16)-[messageLabel]", options: NSLayoutFormatOptions.AlignAllCenterX, metrics: nil, views: views))
+        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:[self]-(<=0)-[activityIndicatorView]", options: NSLayoutFormatOptions.alignAllCenterY, metrics: nil, views: views))
+        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[self]-(<=0)-[activityIndicatorView]", options: NSLayoutFormatOptions.alignAllCenterX, metrics: nil, views: views))
+        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[self]-(<=0)-[messageLabel]", options: NSLayoutFormatOptions.alignAllCenterX, metrics: nil, views: views))
+        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[activityIndicatorView]-(16)-[messageLabel]", options: NSLayoutFormatOptions.alignAllCenterX, metrics: nil, views: views))
         
     }
     
@@ -49,20 +49,20 @@ public class Kazaguruma: UIView {
     }
     
     
-    public class func show(toView:UIView) -> Kazaguruma {
-        return Kazaguruma.show(toView, backgroundColor: UIColor.whiteColor(), indicatorViewStyle: .Gray, message: nil, afterdelay: 0.0)
+    open class func show(_ toView:UIView) -> Kazaguruma {
+        return Kazaguruma.show(toView, backgroundColor: UIColor.white, indicatorViewStyle: .gray, message: nil, afterdelay: 0.0)
     }
     
-    public class func show(toView:UIView, backgroundColor:UIColor, indicatorViewStyle:UIActivityIndicatorViewStyle) -> Kazaguruma {
+    open class func show(_ toView:UIView, backgroundColor:UIColor, indicatorViewStyle:UIActivityIndicatorViewStyle) -> Kazaguruma {
         return Kazaguruma.show(toView, backgroundColor: backgroundColor, indicatorViewStyle: indicatorViewStyle, message: nil, afterdelay: 0.0, enableAutolayout: true)
     }
     
-    public class func show(toView:UIView, backgroundColor:UIColor, indicatorViewStyle:UIActivityIndicatorViewStyle, message:String?, afterdelay:NSTimeInterval) -> Kazaguruma {
+    open class func show(_ toView:UIView, backgroundColor:UIColor, indicatorViewStyle:UIActivityIndicatorViewStyle, message:String?, afterdelay:TimeInterval) -> Kazaguruma {
         return Kazaguruma.show(toView, backgroundColor: backgroundColor, indicatorViewStyle: indicatorViewStyle, message: nil, afterdelay: 0.0, enableAutolayout: true)
     }
     
     
-    public class func show(toView:UIView, backgroundColor:UIColor, indicatorViewStyle:UIActivityIndicatorViewStyle, message:String?, afterdelay:NSTimeInterval, enableAutolayout:Bool) -> Kazaguruma {
+    open class func show(_ toView:UIView, backgroundColor:UIColor, indicatorViewStyle:UIActivityIndicatorViewStyle, message:String?, afterdelay:TimeInterval, enableAutolayout:Bool) -> Kazaguruma {
         let indicatorView = Kazaguruma(frame: toView.bounds)
         
         indicatorView.backgroundColor = backgroundColor
@@ -75,8 +75,8 @@ public class Kazaguruma: UIView {
             // AoutoLayout
             indicatorView.translatesAutoresizingMaskIntoConstraints = false
             let views = ["indicatorView": indicatorView]
-            toView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[indicatorView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views))
-            toView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[indicatorView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views))
+            toView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[indicatorView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views))
+            toView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[indicatorView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views))
             
         }
         
@@ -85,16 +85,16 @@ public class Kazaguruma: UIView {
             
             indicatorView.messageLabel.text = message
             indicatorView.messageLabel.alpha = 0.0
-            indicatorView.messageLabel.hidden = false
+            indicatorView.messageLabel.isHidden = false
             
-            UIView.animateWithDuration(
-                0.8,
+            UIView.animate(
+                withDuration: 0.8,
                 delay: afterdelay,
-                options: .CurveEaseIn,
+                options: .curveEaseIn,
                 animations: { () -> Void in
                     
                     // optimize messageLabel of position
-                    let transform = CGAffineTransformMakeTranslation(0.0, -16.0)
+                    let transform = CGAffineTransform(translationX: 0.0, y: -16.0)
                     indicatorView.activityIndicatorView.transform = transform
                     indicatorView.messageLabel.transform          = transform
                     indicatorView.messageLabel.alpha              = 1.0
@@ -109,20 +109,20 @@ public class Kazaguruma: UIView {
         
     }
     
-    public class func hide(forView:UIView) {
+    open class func hide(_ forView:UIView) {
         self.hide(forView, animated: false, completion: nil)
     }
     
-    public class func hide(forView:UIView, animated:Bool, completion:(() -> Void)?) {
+    open class func hide(_ forView:UIView, animated:Bool, completion:(() -> Void)?) {
         
         
         if let indicatorView = self.indicatorView(forView) {
             if animated {
                 
-                UIView.animateWithDuration(
-                    0.3,
+                UIView.animate(
+                    withDuration: 0.3,
                     delay: 0.0,
-                    options: .CurveEaseOut,
+                    options: .curveEaseOut,
                     animations: { () -> Void in
                         indicatorView.alpha = 0.0
                     },
@@ -139,43 +139,38 @@ public class Kazaguruma: UIView {
         }
     }
     
-    public class func indicatorView(forView:UIView) -> Kazaguruma? {
+    open class func indicatorView(_ forView:UIView) -> Kazaguruma? {
         
-        for subview in forView.subviews.reverse() {
+        for subview in forView.subviews.reversed() {
             
-            if subview.isKindOfClass(Kazaguruma.self) {
+            if subview.isKind(of: Kazaguruma.self) {
                 return subview as? Kazaguruma
             }
         }
         
         return nil
     }
-    
-    
-    
+
     // MARK: - Private Method
     
     func startAnimating() {
-        self.activityIndicatorView.hidden = false
-        if !self.activityIndicatorView.isAnimating() {
+        self.activityIndicatorView.isHidden = false
+        if !self.activityIndicatorView.isAnimating {
             self.activityIndicatorView.startAnimating()
         }
     }
     
     func stopAnimating() {
         self.activityIndicatorView.stopAnimating()
-        self.activityIndicatorView.hidden = true
+        self.activityIndicatorView.isHidden = true
     }
+
     
-    
-    func removeViewWithCompletion(completion: (() -> Void)?) {
+    func removeViewWithCompletion(_ completion: (() -> Void)?) {
         self.stopAnimating()
         self.removeFromSuperview()
         
         completion?()
     }
-    
-    
-    
-    
+
 }

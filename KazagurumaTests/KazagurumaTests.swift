@@ -28,45 +28,45 @@ class KazagurumaTests: XCTestCase {
         
         let indicatorView = view.subviews[0] as! Kazaguruma
         
-        XCTAssert(indicatorView.messageLabel.hidden)
-        XCTAssert(!indicatorView.activityIndicatorView.hidden)
+        XCTAssert(indicatorView.messageLabel.isHidden)
+        XCTAssert(!indicatorView.activityIndicatorView.isHidden)
 
     }
 
     func testDesignIsReflected() {
         
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 400, height: 400))
-        Kazaguruma.show(view, backgroundColor: UIColor.redColor(), indicatorViewStyle: .White)
+        Kazaguruma.show(view, backgroundColor: UIColor.red, indicatorViewStyle: .white)
         
         XCTAssert(view.subviews.count > 0)
         
         let indicatorView = view.subviews[0] as! Kazaguruma
         
-        XCTAssert(indicatorView.messageLabel.hidden)
-        XCTAssert(!indicatorView.activityIndicatorView.hidden)
-        XCTAssert(indicatorView.backgroundColor == UIColor.redColor())
-        XCTAssert(indicatorView.activityIndicatorView.activityIndicatorViewStyle == .White)
+        XCTAssert(indicatorView.messageLabel.isHidden)
+        XCTAssert(!indicatorView.activityIndicatorView.isHidden)
+        XCTAssert(indicatorView.backgroundColor == UIColor.red)
+        XCTAssert(indicatorView.activityIndicatorView.activityIndicatorViewStyle == .white)
         
     }
     
     func testMessageIsReflected() {
         
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 400, height: 400))
-        Kazaguruma.show(view, backgroundColor: UIColor.redColor(), indicatorViewStyle: .White, message:"waiting", afterdelay: 0.0)
+        Kazaguruma.show(view, backgroundColor: UIColor.red, indicatorViewStyle: .white, message:"waiting", afterdelay: 0.0)
         
         XCTAssert(view.subviews.count > 0)
         
         let indicatorView = view.subviews[0] as! Kazaguruma
         
         
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(1.0 * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(Int64(1.0 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: {
 
             XCTAssert(indicatorView.messageLabel.text == "waiting ....", "町があががが")
-            XCTAssert(!indicatorView.messageLabel.hidden)
+            XCTAssert(!indicatorView.messageLabel.isHidden)
             XCTAssert(indicatorView.messageLabel.alpha == 1.0)
-            XCTAssert(!indicatorView.activityIndicatorView.hidden)
-            XCTAssert(indicatorView.backgroundColor == UIColor.redColor())
-            XCTAssert(indicatorView.activityIndicatorView.activityIndicatorViewStyle == .White)
+            XCTAssert(!indicatorView.activityIndicatorView.isHidden)
+            XCTAssert(indicatorView.backgroundColor == UIColor.red)
+            XCTAssert(indicatorView.activityIndicatorView.activityIndicatorViewStyle == .white)
 
         })
 
