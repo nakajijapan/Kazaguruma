@@ -31,7 +31,7 @@ class ViewController: UIViewController {
             Kazaguruma.hide(self.headerView2)
         }
 
-        _ = Kazaguruma.show(self.contentView, backgroundColor: .white, indicatorViewStyle: .gray, message: "Sorry, wait...", afterdelay: 4.0)
+        _ = Kazaguruma.show(self.contentView, backgroundColor: .white, indicatorViewStyle: .gray, message: "Sorry, wait...", afterdelay: 3.0)
         DispatchQueue.main.asyncAfter(deadline: .now() + 7.0) {
             Kazaguruma.hide(self.contentView, animated: true, completion: {
                 print("close!")

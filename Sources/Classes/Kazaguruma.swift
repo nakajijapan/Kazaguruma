@@ -15,32 +15,32 @@ open class Kazaguruma: UIView {
 
     override init(frame: CGRect) {
 
-        self.activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
-        self.messageLabel = UILabel()
+        activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        messageLabel = UILabel()
 
         super.init(frame: frame)
 
-        self.backgroundColor = .white
-        self.addSubview(self.activityIndicatorView)
+        backgroundColor = .white
+        addSubview(activityIndicatorView)
 
-        self.messageLabel.isHidden = true
-        self.messageLabel.font = UIFont.systemFont(ofSize: 14.0)
-        self.addSubview(self.messageLabel)
+        messageLabel.isHidden = true
+        messageLabel.font = UIFont.systemFont(ofSize: 14.0)
+        addSubview(messageLabel)
 
         // AutoLayout
-        self.activityIndicatorView.translatesAutoresizingMaskIntoConstraints = false
-        self.messageLabel.translatesAutoresizingMaskIntoConstraints = false
+        activityIndicatorView.translatesAutoresizingMaskIntoConstraints = false
+        messageLabel.translatesAutoresizingMaskIntoConstraints = false
 
         let views = [
             "self": self,
-            "activityIndicatorView": self.activityIndicatorView,
-            "messageLabel": self.messageLabel,
+            "activityIndicatorView": activityIndicatorView,
+            "messageLabel": messageLabel,
             ] as [String : Any]
 
-        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:[self]-(<=0)-[activityIndicatorView]", options: NSLayoutFormatOptions.alignAllCenterY, metrics: nil, views: views))
-        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[self]-(<=0)-[activityIndicatorView]", options: NSLayoutFormatOptions.alignAllCenterX, metrics: nil, views: views))
-        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[self]-(<=0)-[messageLabel]", options: NSLayoutFormatOptions.alignAllCenterX, metrics: nil, views: views))
-        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[activityIndicatorView]-(16)-[messageLabel]", options: NSLayoutFormatOptions.alignAllCenterX, metrics: nil, views: views))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:[self]-(<=0)-[activityIndicatorView]", options: NSLayoutFormatOptions.alignAllCenterY, metrics: nil, views: views))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[self]-(<=0)-[activityIndicatorView]", options: NSLayoutFormatOptions.alignAllCenterX, metrics: nil, views: views))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[self]-(<=0)-[messageLabel]", options: NSLayoutFormatOptions.alignAllCenterX, metrics: nil, views: views))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[activityIndicatorView]-(16)-[messageLabel]", options: NSLayoutFormatOptions.alignAllCenterX, metrics: nil, views: views))
 
     }
 
@@ -108,12 +108,12 @@ open class Kazaguruma: UIView {
     }
 
     open class func hide(_ forView: UIView) {
-        self.hide(forView, animated: false, completion: nil)
+        hide(forView, animated: false, completion: nil)
     }
 
     open class func hide(_ forView: UIView, animated: Bool, completion: (() -> Void)?) {
 
-        if let indicatorView = self.indicatorView(forView) {
+        if let indicatorView = indicatorView(forView) {
             if animated {
 
                 UIView.animate(
@@ -151,20 +151,20 @@ open class Kazaguruma: UIView {
     // MARK: - Private Method
 
     func startAnimating() {
-        self.activityIndicatorView.isHidden = false
-        if !self.activityIndicatorView.isAnimating {
-            self.activityIndicatorView.startAnimating()
+        activityIndicatorView.isHidden = false
+        if !activityIndicatorView.isAnimating {
+            activityIndicatorView.startAnimating()
         }
     }
 
     func stopAnimating() {
-        self.activityIndicatorView.stopAnimating()
-        self.activityIndicatorView.isHidden = true
+        activityIndicatorView.stopAnimating()
+        activityIndicatorView.isHidden = true
     }
 
     func removeViewWithCompletion(_ completion: (() -> Void)?) {
-        self.stopAnimating()
-        self.removeFromSuperview()
+        stopAnimating()
+        removeFromSuperview()
 
         completion?()
     }
