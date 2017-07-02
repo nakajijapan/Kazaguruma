@@ -58,7 +58,6 @@ class KazagurumaTests: XCTestCase {
 
         let indicatorView = view.subviews[0] as! Kazaguruma
 
-
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(Int64(1.0 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: {
 
             XCTAssert(indicatorView.messageLabel.text == "waiting ....", "町があががが")
@@ -69,7 +68,6 @@ class KazagurumaTests: XCTestCase {
             XCTAssert(indicatorView.activityIndicatorView.activityIndicatorViewStyle == .white)
 
         })
-
 
     }
 
@@ -98,8 +96,6 @@ class KazagurumaTests: XCTestCase {
 
         }
 
-
     }
-
 
 }

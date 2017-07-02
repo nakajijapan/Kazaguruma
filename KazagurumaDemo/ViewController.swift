@@ -12,8 +12,6 @@ import Kazaguruma
 
 class ViewController: UIViewController {
 
-
-
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var headerView2: UIView!
     @IBOutlet weak var contentView: UIView!
@@ -41,4 +39,3 @@ class ViewController: UIViewController {
         }
     }
 }
-

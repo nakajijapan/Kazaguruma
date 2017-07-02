@@ -48,7 +48,6 @@ open class Kazaguruma: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-
     open class func show(_ toView:UIView) -> Kazaguruma {
         return Kazaguruma.show(toView, backgroundColor: UIColor.white, indicatorViewStyle: .gray, message: nil, afterdelay: 0.0)
     }
@@ -60,7 +59,6 @@ open class Kazaguruma: UIView {
     open class func show(_ toView:UIView, backgroundColor:UIColor, indicatorViewStyle:UIActivityIndicatorViewStyle, message:String?, afterdelay:TimeInterval) -> Kazaguruma {
         return Kazaguruma.show(toView, backgroundColor: backgroundColor, indicatorViewStyle: indicatorViewStyle, message: nil, afterdelay: 0.0, enableAutolayout: true)
     }
-
 
     open class func show(_ toView:UIView, backgroundColor:UIColor, indicatorViewStyle:UIActivityIndicatorViewStyle, message:String?, afterdelay:TimeInterval, enableAutolayout:Bool) -> Kazaguruma {
         let indicatorView = Kazaguruma(frame: toView.bounds)
@@ -115,7 +113,6 @@ open class Kazaguruma: UIView {
 
     open class func hide(_ forView:UIView, animated:Bool, completion:(() -> Void)?) {
 
-
         if let indicatorView = self.indicatorView(forView) {
             if animated {
 
@@ -164,7 +161,6 @@ open class Kazaguruma: UIView {
         self.activityIndicatorView.stopAnimating()
         self.activityIndicatorView.isHidden = true
     }
-
 
     func removeViewWithCompletion(_ completion: (() -> Void)?) {
         self.stopAnimating()
