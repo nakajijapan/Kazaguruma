@@ -20,7 +20,7 @@ open class Kazaguruma: UIView {
 
         super.init(frame: frame)
 
-        self.backgroundColor = UIColor.white
+        self.backgroundColor = .white
         self.addSubview(self.activityIndicatorView)
 
         self.messageLabel.isHidden = true
@@ -49,7 +49,7 @@ open class Kazaguruma: UIView {
     }
 
     open class func show(_ toView: UIView) -> Kazaguruma {
-        return Kazaguruma.show(toView, backgroundColor: UIColor.white, indicatorViewStyle: .gray, message: nil, afterdelay: 0.0)
+        return Kazaguruma.show(toView, backgroundColor: .white, indicatorViewStyle: .gray, message: nil, afterdelay: 0.0)
     }
 
     open class func show(_ toView: UIView, backgroundColor: UIColor, indicatorViewStyle: UIActivityIndicatorViewStyle) -> Kazaguruma {

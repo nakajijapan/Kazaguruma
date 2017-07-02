@@ -36,7 +36,7 @@ class KazagurumaTests: XCTestCase {
     func testDesignIsReflected() {
 
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 400, height: 400))
-        _ = Kazaguruma.show(view, backgroundColor: UIColor.red, indicatorViewStyle: .white)
+        _ = Kazaguruma.show(view, backgroundColor: .red, indicatorViewStyle: .white)
 
         XCTAssert(view.subviews.count > 0)
 
@@ -44,7 +44,7 @@ class KazagurumaTests: XCTestCase {
 
         XCTAssert(indicatorView.messageLabel.isHidden)
         XCTAssert(!indicatorView.activityIndicatorView.isHidden)
-        XCTAssert(indicatorView.backgroundColor == UIColor.red)
+        XCTAssert(indicatorView.backgroundColor == .red)
         XCTAssert(indicatorView.activityIndicatorView.activityIndicatorViewStyle == .white)
 
     }
@@ -52,7 +52,7 @@ class KazagurumaTests: XCTestCase {
     func testMessageIsReflected() {
 
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 400, height: 400))
-        _ = Kazaguruma.show(view, backgroundColor: UIColor.red, indicatorViewStyle: .white, message:"waiting", afterdelay: 0.0)
+        _ = Kazaguruma.show(view, backgroundColor: .red, indicatorViewStyle: .white, message:"waiting", afterdelay: 0.0)
 
         XCTAssert(view.subviews.count > 0)
 
@@ -64,7 +64,7 @@ class KazagurumaTests: XCTestCase {
             XCTAssert(!indicatorView.messageLabel.isHidden)
             XCTAssert(indicatorView.messageLabel.alpha == 1.0)
             XCTAssert(!indicatorView.activityIndicatorView.isHidden)
-            XCTAssert(indicatorView.backgroundColor == UIColor.red)
+            XCTAssert(indicatorView.backgroundColor == .red)
             XCTAssert(indicatorView.activityIndicatorView.activityIndicatorViewStyle == .white)
 
         })
