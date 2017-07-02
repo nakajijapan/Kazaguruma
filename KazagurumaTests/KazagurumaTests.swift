@@ -22,7 +22,7 @@ class KazagurumaTests: XCTestCase {
     func testExistsIndicatorView() {
 
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 400, height: 400))
-        Kazaguruma.show(view)
+        _ = Kazaguruma.show(view)
 
         XCTAssert(view.subviews.count > 0)
 
@@ -36,7 +36,7 @@ class KazagurumaTests: XCTestCase {
     func testDesignIsReflected() {
 
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 400, height: 400))
-        Kazaguruma.show(view, backgroundColor: UIColor.red, indicatorViewStyle: .white)
+        _ = Kazaguruma.show(view, backgroundColor: UIColor.red, indicatorViewStyle: .white)
 
         XCTAssert(view.subviews.count > 0)
 
@@ -52,7 +52,7 @@ class KazagurumaTests: XCTestCase {
     func testMessageIsReflected() {
 
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 400, height: 400))
-        Kazaguruma.show(view, backgroundColor: UIColor.red, indicatorViewStyle: .white, message:"waiting", afterdelay: 0.0)
+        _ = Kazaguruma.show(view, backgroundColor: UIColor.red, indicatorViewStyle: .white, message:"waiting", afterdelay: 0.0)
 
         XCTAssert(view.subviews.count > 0)
 
@@ -76,7 +76,7 @@ class KazagurumaTests: XCTestCase {
     func testCanCloseIndicatorView() {
 
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 400, height: 400))
-        Kazaguruma.show(view)
+        _ = Kazaguruma.show(view)
 
         XCTAssert(view.subviews.count > 0)
 
@@ -88,7 +88,7 @@ class KazagurumaTests: XCTestCase {
     func testExecuteBlock() {
 
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 400, height: 400))
-        Kazaguruma.show(view)
+        _ = Kazaguruma.show(view)
 
         XCTAssert(view.subviews.count > 0)
 
