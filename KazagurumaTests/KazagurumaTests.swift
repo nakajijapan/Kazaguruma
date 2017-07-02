@@ -92,7 +92,7 @@ class KazagurumaTests: XCTestCase {
 
         XCTAssert(view.subviews.count > 0)
 
-        Kazaguruma.hide(view, animated: true) { () -> Void in
+        Kazaguruma.hide(view, animated: true) {
 
             XCTAssert(view.subviews.count == 0)
 

@@ -91,7 +91,7 @@ open class Kazaguruma: UIView {
                 withDuration: 0.8,
                 delay: afterdelay,
                 options: .curveEaseIn,
-                animations: { () -> Void in
+                animations: {
 
                     // optimize messageLabel of position
                     let transform = CGAffineTransform(translationX: 0.0, y: -16.0)
@@ -123,7 +123,7 @@ open class Kazaguruma: UIView {
                     withDuration: 0.3,
                     delay: 0.0,
                     options: .curveEaseOut,
-                    animations: { () -> Void in
+                    animations: {
                         indicatorView.alpha = 0.0
                     },
                     completion: { (finished) -> Void in
