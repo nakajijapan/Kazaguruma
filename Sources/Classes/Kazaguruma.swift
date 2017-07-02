@@ -56,11 +56,11 @@ open class Kazaguruma: UIView {
         return Kazaguruma.show(toView, backgroundColor: backgroundColor, indicatorViewStyle: indicatorViewStyle, message: nil, afterdelay: 0.0, enableAutolayout: true)
     }
 
-    open class func show(_ toView: UIView, backgroundColor: UIColor, indicatorViewStyle: UIActivityIndicatorViewStyle, message:String?, afterdelay:TimeInterval) -> Kazaguruma {
+    open class func show(_ toView: UIView, backgroundColor: UIColor, indicatorViewStyle: UIActivityIndicatorViewStyle, message: String?, afterdelay: TimeInterval) -> Kazaguruma {
         return Kazaguruma.show(toView, backgroundColor: backgroundColor, indicatorViewStyle: indicatorViewStyle, message: nil, afterdelay: 0.0, enableAutolayout: true)
     }
 
-    open class func show(_ toView: UIView, backgroundColor: UIColor, indicatorViewStyle: UIActivityIndicatorViewStyle, message:String?, afterdelay:TimeInterval, enableAutolayout:Bool) -> Kazaguruma {
+    open class func show(_ toView: UIView, backgroundColor: UIColor, indicatorViewStyle: UIActivityIndicatorViewStyle, message: String?, afterdelay: TimeInterval, enableAutolayout: Bool) -> Kazaguruma {
         let indicatorView = Kazaguruma(frame: toView.bounds)
 
         indicatorView.backgroundColor = backgroundColor

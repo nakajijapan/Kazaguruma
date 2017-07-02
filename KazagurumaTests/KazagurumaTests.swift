@@ -52,7 +52,7 @@ class KazagurumaTests: XCTestCase {
     func testMessageIsReflected() {
 
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 400, height: 400))
-        _ = Kazaguruma.show(view, backgroundColor: .red, indicatorViewStyle: .white, message:"waiting", afterdelay: 0.0)
+        _ = Kazaguruma.show(view, backgroundColor: .red, indicatorViewStyle: .white, message: "waiting", afterdelay: 0.0)
 
         XCTAssert(view.subviews.count > 0)
 
