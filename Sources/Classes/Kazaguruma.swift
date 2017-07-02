@@ -48,19 +48,19 @@ open class Kazaguruma: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    open class func show(_ toView:UIView) -> Kazaguruma {
+    open class func show(_ toView: UIView) -> Kazaguruma {
         return Kazaguruma.show(toView, backgroundColor: UIColor.white, indicatorViewStyle: .gray, message: nil, afterdelay: 0.0)
     }
 
-    open class func show(_ toView:UIView, backgroundColor:UIColor, indicatorViewStyle:UIActivityIndicatorViewStyle) -> Kazaguruma {
+    open class func show(_ toView: UIView, backgroundColor: UIColor, indicatorViewStyle: UIActivityIndicatorViewStyle) -> Kazaguruma {
         return Kazaguruma.show(toView, backgroundColor: backgroundColor, indicatorViewStyle: indicatorViewStyle, message: nil, afterdelay: 0.0, enableAutolayout: true)
     }
 
-    open class func show(_ toView:UIView, backgroundColor:UIColor, indicatorViewStyle:UIActivityIndicatorViewStyle, message:String?, afterdelay:TimeInterval) -> Kazaguruma {
+    open class func show(_ toView: UIView, backgroundColor: UIColor, indicatorViewStyle: UIActivityIndicatorViewStyle, message:String?, afterdelay:TimeInterval) -> Kazaguruma {
         return Kazaguruma.show(toView, backgroundColor: backgroundColor, indicatorViewStyle: indicatorViewStyle, message: nil, afterdelay: 0.0, enableAutolayout: true)
     }
 
-    open class func show(_ toView:UIView, backgroundColor:UIColor, indicatorViewStyle:UIActivityIndicatorViewStyle, message:String?, afterdelay:TimeInterval, enableAutolayout:Bool) -> Kazaguruma {
+    open class func show(_ toView: UIView, backgroundColor: UIColor, indicatorViewStyle: UIActivityIndicatorViewStyle, message:String?, afterdelay:TimeInterval, enableAutolayout:Bool) -> Kazaguruma {
         let indicatorView = Kazaguruma(frame: toView.bounds)
 
         indicatorView.backgroundColor = backgroundColor
@@ -111,7 +111,7 @@ open class Kazaguruma: UIView {
         self.hide(forView, animated: false, completion: nil)
     }
 
-    open class func hide(_ forView: UIView, animated:Bool, completion:(() -> Void)?) {
+    open class func hide(_ forView: UIView, animated: Bool, completion: (() -> Void)?) {
 
         if let indicatorView = self.indicatorView(forView) {
             if animated {
