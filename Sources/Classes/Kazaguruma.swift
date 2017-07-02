@@ -44,23 +44,11 @@ open class Kazaguruma: UIView {
 
     }
 
-    required public init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    required public convenience init?(coder aDecoder: NSCoder) {
+        self.init(frame: CGRect.zero)
     }
 
-    open class func show(_ toView: UIView) -> Kazaguruma {
-        return Kazaguruma.show(toView, backgroundColor: .white, indicatorViewStyle: .gray, message: nil, afterdelay: 0.0)
-    }
-
-    open class func show(_ toView: UIView, backgroundColor: UIColor, indicatorViewStyle: UIActivityIndicatorViewStyle) -> Kazaguruma {
-        return Kazaguruma.show(toView, backgroundColor: backgroundColor, indicatorViewStyle: indicatorViewStyle, message: nil, afterdelay: 0.0, enableAutolayout: true)
-    }
-
-    open class func show(_ toView: UIView, backgroundColor: UIColor, indicatorViewStyle: UIActivityIndicatorViewStyle, message: String?, afterdelay: TimeInterval) -> Kazaguruma {
-        return Kazaguruma.show(toView, backgroundColor: backgroundColor, indicatorViewStyle: indicatorViewStyle, message: nil, afterdelay: 0.0, enableAutolayout: true)
-    }
-
-    open class func show(_ toView: UIView, backgroundColor: UIColor, indicatorViewStyle: UIActivityIndicatorViewStyle, message: String?, afterdelay: TimeInterval, enableAutolayout: Bool) -> Kazaguruma {
+    open class func show(_ toView: UIView, backgroundColor: UIColor = .white, indicatorViewStyle: UIActivityIndicatorViewStyle = .gray, message: String? = nil, afterdelay: TimeInterval = 0.0, enableAutolayout: Bool = true) -> Kazaguruma {
         let indicatorView = Kazaguruma(frame: toView.bounds)
 
         indicatorView.backgroundColor = backgroundColor
@@ -69,13 +57,11 @@ open class Kazaguruma: UIView {
         toView.addSubview(indicatorView)
 
         if (enableAutolayout) {
-
             // AoutoLayout
             indicatorView.translatesAutoresizingMaskIntoConstraints = false
             let views = ["indicatorView": indicatorView]
             toView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[indicatorView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views))
             toView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[indicatorView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views))
-
         }
 
         // Show Message
