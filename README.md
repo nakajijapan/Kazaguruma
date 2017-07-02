@@ -11,8 +11,8 @@ Kazaguruma is a loading indicator View that can be multiple display on the scree
 
 ## Requirements
 
-- iOS 8.0+
-- Xcode 7.2+
+- iOS 9.3+
+- Xcode 8.3+
 
 ## CocoaPods
 
