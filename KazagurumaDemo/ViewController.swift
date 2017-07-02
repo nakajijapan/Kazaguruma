@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 nakajijapan. All rights reserved.
 //
 
+import Foundation
 import UIKit
 import Kazaguruma
 
@@ -22,26 +23,22 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        Kazaguruma.show(self.headerView)
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(3.0 * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), {
+        _ = Kazaguruma.show(self.headerView)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
             Kazaguruma.hide(self.headerView)
-        })
+        }
 
-        Kazaguruma.show(self.headerView2, backgroundColor: UIColor.blackColor() , indicatorViewStyle: .WhiteLarge)
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(5.0 * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), {
+        _ = Kazaguruma.show(self.headerView2, backgroundColor: .black , indicatorViewStyle: .whiteLarge)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
             Kazaguruma.hide(self.headerView2)
-        })
+        }
 
-        Kazaguruma.show(self.contentView, backgroundColor: UIColor.whiteColor(), indicatorViewStyle: .Gray, message: "Sorry, wait...", afterdelay: 4.0)
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(7.0 * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), {
+        _ = Kazaguruma.show(self.contentView, backgroundColor: .white, indicatorViewStyle: .gray, message: "Sorry, wait...", afterdelay: 4.0)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 7.0) {
             Kazaguruma.hide(self.contentView, animated: true, completion: { () -> Void in
                 print("close!")
             })
-
-        })
-
-
+        }
     }
-
 }
 
