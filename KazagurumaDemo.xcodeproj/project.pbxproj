@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B063A9701F08D1D700590F15 /* Kazaguruma.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B063A96F1F08D1D700590F15 /* Kazaguruma.framework */; };
 		B063A9711F08D1D700590F15 /* Kazaguruma.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B063A96F1F08D1D700590F15 /* Kazaguruma.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DC50A12E207E51380076ACC8 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC50A12D207E51370076ACC8 /* ViewController2.swift */; };
 		DCA565761C340474004AF700 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA565751C340474004AF700 /* AppDelegate.swift */; };
 		DCA565781C340474004AF700 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA565771C340474004AF700 /* ViewController.swift */; };
 		DCA5657B1C340474004AF700 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCA565791C340474004AF700 /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		B063A96F1F08D1D700590F15 /* Kazaguruma.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kazaguruma.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC50A12D207E51370076ACC8 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		DCA565721C340474004AF700 /* KazagurumaDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KazagurumaDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCA565751C340474004AF700 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCA565771C340474004AF700 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,7 +41,6 @@
 		DCA5657C1C340474004AF700 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DCA5657F1C340474004AF700 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DCA565811C340474004AF700 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DCB9C0AE1C366BB300F4E30D /* Kazaguruma.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Kazaguruma.framework; path = "/Users/nakajijapan/Library/Developer/Xcode/DerivedData/Kazaguruma-duindpjouurbmkaqokalztbtbtez/Build/Products/Debug-iphoneos/Kazaguruma.framework"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +59,6 @@
 			isa = PBXGroup;
 			children = (
 				B063A96F1F08D1D700590F15 /* Kazaguruma.framework */,
-				DCB9C0AE1C366BB300F4E30D /* Kazaguruma.framework */,
 				DCA565741C340474004AF700 /* KazagurumaDemo */,
 				DCA565731C340474004AF700 /* Products */,
 			);
@@ -77,6 +77,7 @@
 			children = (
 				DCA565751C340474004AF700 /* AppDelegate.swift */,
 				DCA565771C340474004AF700 /* ViewController.swift */,
+				DC50A12D207E51370076ACC8 /* ViewController2.swift */,
 				DCA565791C340474004AF700 /* Main.storyboard */,
 				DCA5657C1C340474004AF700 /* Assets.xcassets */,
 				DCA5657E1C340474004AF700 /* LaunchScreen.storyboard */,
@@ -113,7 +114,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = nakajijapan;
 				TargetAttributes = {
 					DCA565711C340474004AF700 = {
@@ -159,6 +160,7 @@
 			files = (
 				DCA565781C340474004AF700 /* ViewController.swift in Sources */,
 				DCA565761C340474004AF700 /* AppDelegate.swift in Sources */,
+				DC50A12E207E51380076ACC8 /* ViewController2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,14 +194,22 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -239,14 +249,22 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -281,7 +299,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.nakajijapan.KazagurumaDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -294,7 +312,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.nakajijapan.KazagurumaDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
