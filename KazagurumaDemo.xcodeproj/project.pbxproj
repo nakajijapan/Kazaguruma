@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B063A9701F08D1D700590F15 /* Kazaguruma.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B063A96F1F08D1D700590F15 /* Kazaguruma.framework */; };
 		B063A9711F08D1D700590F15 /* Kazaguruma.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B063A96F1F08D1D700590F15 /* Kazaguruma.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DC50A12E207E51380076ACC8 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC50A12D207E51370076ACC8 /* ViewController2.swift */; };
 		DCA565761C340474004AF700 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA565751C340474004AF700 /* AppDelegate.swift */; };
 		DCA565781C340474004AF700 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA565771C340474004AF700 /* ViewController.swift */; };
 		DCA5657B1C340474004AF700 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCA565791C340474004AF700 /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		B063A96F1F08D1D700590F15 /* Kazaguruma.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kazaguruma.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC50A12D207E51370076ACC8 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		DCA565721C340474004AF700 /* KazagurumaDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KazagurumaDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCA565751C340474004AF700 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCA565771C340474004AF700 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 			children = (
 				DCA565751C340474004AF700 /* AppDelegate.swift */,
 				DCA565771C340474004AF700 /* ViewController.swift */,
+				DC50A12D207E51370076ACC8 /* ViewController2.swift */,
 				DCA565791C340474004AF700 /* Main.storyboard */,
 				DCA5657C1C340474004AF700 /* Assets.xcassets */,
 				DCA5657E1C340474004AF700 /* LaunchScreen.storyboard */,
@@ -157,6 +160,7 @@
 			files = (
 				DCA565781C340474004AF700 /* ViewController.swift in Sources */,
 				DCA565761C340474004AF700 /* AppDelegate.swift in Sources */,
+				DC50A12E207E51380076ACC8 /* ViewController2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
